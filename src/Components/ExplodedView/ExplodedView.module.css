@@ -1,0 +1,138 @@
+.wrapper {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoCard {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 90%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border: 2px solid white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+/* Repel Effect — Four animated corner dots */
+.videoCard::before,
+.videoCard::after,
+.videoCard .cornerTopRight,
+.videoCard .cornerBottomLeft {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #00c6ff;
+  border-radius: 50%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.6;
+}
+
+/* Corner positions */
+.videoCard::before {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.videoCard::after {
+  bottom: 0;
+  right: 0;
+  transform: translate(0, 0);
+}
+
+.videoCard .cornerTopRight {
+  top: 0;
+  right: 0;
+  transform: translate(0, 0);
+}
+
+.videoCard .cornerBottomLeft {
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+/* Hover Repel */
+.videoCard:hover::before {
+  transform: translate(-12px, -12px);
+}
+
+.videoCard:hover::after {
+  transform: translate(12px, 12px);
+}
+
+.videoCard:hover .cornerTopRight {
+  transform: translate(12px, -12px);
+}
+
+.videoCard:hover .cornerBottomLeft {
+  transform: translate(-12px, 12px);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional tags */
+.tag {
+  position: absolute;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 1.25rem;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(to right, #00c6ff, #5b247a);
+}
+
+.topLeft {
+  top: 1.5rem;
+  left: 1.5rem;
+  background: #3b82f6;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2563eb;
+  padding: 0.9rem 1.2rem;
+  border-radius: 50%;
+}
+
+.bottomLeft {
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: #f97316;
+}
+
+.bottomRight {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #facc15;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .tag {
+    display: none;
+  }
+
+  .wrapper {
+    padding: 30px 20px;
+  }
+}

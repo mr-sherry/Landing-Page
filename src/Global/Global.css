@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: 'Your Font Name', , sans-serif ; */
+  font-family: 'Saira', sans-serif !important;
+}
+
+body {
+  height: 100vh;
+  background: black;
+  font-family: inherit;
+  overflow-x: hidden;
+}
+@keyframes floatY {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-12px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}

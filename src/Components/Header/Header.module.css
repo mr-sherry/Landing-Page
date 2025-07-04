@@ -1,0 +1,138 @@
+.header {
+  position: fixed; /* stay on top while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  display: flex;
+  justify-content: center; /* keeps inner container centered */
+  pointer-events: none; /* let section hero capture interactions except nav */
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: all; /* re‑enable pointer events for real children */
+}
+
+/* ----- Logo ----- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+}
+
+.logoIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.logoText {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: #ffffff;
+  user-select: none;
+}
+
+/* ----- Navigation pill ----- */
+.nav {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 9999px; /* full pill */
+  padding: 15px 50px; /* 8px 40px */
+}
+
+.navList {
+  display: flex;
+  gap: 2.5rem; /* 40px */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.9375rem; /* 15px */
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.navItem:hover {
+  opacity: 0.75;
+}
+
+.icon {
+  width: 0.75rem; /* 12px */
+  height: 0.75rem;
+  stroke-width: 2.5;
+}
+
+/* ----- Right‑side actions ----- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem; /* 28px */
+}
+
+.login {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: opacity 0.2s ease;
+}
+.login:hover {
+  opacity: 0.75;
+}
+
+.demoBtn {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.5rem 1.75rem; /* 8px 28px */
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+.demoBtn:hover {
+  background: #f2f2f2;
+  transform: translateY(-2px);
+}
+
+/* ----- Responsive tweaks ----- */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0.5rem 1.5rem;
+  }
+  .navList {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: space-between;
+  }
+  .nav {
+    display: none; /* hide nav on small screens (add drawer/menu later) */
+  }
+}

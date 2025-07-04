@@ -1,0 +1,15 @@
+.mainDiv {
+  height: 80vh;
+  width: 100%;
+  background-color: black;
+}
+@media (max-width: 768px) {
+  .mainDiv {
+    height: 200vh;
+  }
+}
+@media (max-width: 460px) {
+  .mainDiv {
+    height: 200vh;
+  }
+}
