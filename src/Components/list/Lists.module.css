@@ -22,6 +22,8 @@
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .filters {
@@ -30,13 +32,13 @@
   background: white;
   padding: 1rem;
   border-radius: 12px;
-  height: fit-content;
+  height: 550px;
 }
 
 .filterTitle {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .select,

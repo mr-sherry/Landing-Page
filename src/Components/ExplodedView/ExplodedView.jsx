@@ -8,7 +8,7 @@ const ExplodedView = () => {
             <div className={styles.videoCard}>
                 <video
                     className={styles.video}
-                    src="/bikeVid.mp4"
+                    // src="/bikeVid.mp4"
                     poster="/preview.jpg"
                     autoPlay
                     muted

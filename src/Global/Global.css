@@ -7,6 +7,28 @@
   /* font-family: 'Your Font Name', , sans-serif ; */
   font-family: 'Saira', sans-serif !important;
 }
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar:hover {
+  transition: 2s;
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #000000; /* Track background */
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00c6ff, #7b1fa2);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  border: none;
+}
 
 body {
   height: 100vh;
