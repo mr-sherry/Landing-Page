@@ -5,6 +5,7 @@ import ScrollImage from './Components/movingImage/ScrollImage'
 import SmartTech from './Components/SmartTech/SmartTech'
 import './App.css'
 import ExplodedView from './Components/ExplodedView/ExplodedView'
+import Lists from './Components/list/Lists'
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
             </div>
             <SmartTech />
             <ExplodedView />
+            <div className="listWrapper" style={{ overflow: 'auto' }}>
+                <Lists />
+            </div>
         </>
     )
 }

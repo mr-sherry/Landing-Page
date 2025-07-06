@@ -1,0 +1,147 @@
+.container {
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  max-width: 1200px;
+  margin: 2rem auto;
+  color: black;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.filters {
+  min-width: 220px;
+  flex: 0 0 220px;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.filterTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.select,
+.rangeInput {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 0.4rem;
+}
+
+.select {
+  background-color: black;
+  color: white;
+}
+
+.rangeInput {
+  accent-color: #000000;
+}
+
+.applyBtn,
+.resetBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.applyBtn {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.resetBtn {
+  background-color: #fdfdfd;
+  color: rgb(0, 0, 0);
+}
+
+.resultCount {
+  font-style: italic;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  gap: 1rem;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+.tableHeader span {
+  color: #ffffff;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  gap: 1rem;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.loading {
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+  color: #aaa;
+}
+.table {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 50px 0px;
+  border-radius: 0px 0px 16px 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
